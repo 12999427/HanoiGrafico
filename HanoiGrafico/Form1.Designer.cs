@@ -32,11 +32,13 @@
             pnl_Torre3 = new Panel();
             pnl_Torre2 = new Panel();
             pnl_Torre1 = new Panel();
+            lbl_Step = new Label();
             pnl_Canvas.SuspendLayout();
             SuspendLayout();
             // 
             // pnl_Canvas
             // 
+            pnl_Canvas.Controls.Add(lbl_Step);
             pnl_Canvas.Controls.Add(pnl_Torre3);
             pnl_Canvas.Controls.Add(pnl_Torre2);
             pnl_Canvas.Controls.Add(pnl_Torre1);
@@ -69,6 +71,16 @@
             pnl_Torre1.Size = new Size(35, 293);
             pnl_Torre1.TabIndex = 0;
             // 
+            // lbl_Step
+            // 
+            lbl_Step.AutoSize = true;
+            lbl_Step.Font = new Font("Times New Roman", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Step.Location = new Point(371, 0);
+            lbl_Step.Name = "lbl_Step";
+            lbl_Step.Size = new Size(29, 33);
+            lbl_Step.TabIndex = 2;
+            lbl_Step.Text = "0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -80,6 +92,7 @@
             Name = "Form1";
             Text = "Form1";
             pnl_Canvas.ResumeLayout(false);
+            pnl_Canvas.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -89,5 +102,6 @@
         private Panel pnl_Torre2;
         private Panel pnl_Torre1;
         private Panel pnl_Torre3;
+        private Label lbl_Step;
     }
 }
